@@ -10,5 +10,6 @@ Usted ha sido contratado para realizar una aplicación que permita registrar y d
 
 
 # Requerimientos
-
+*Permitir saber cuales son los turnos laborales de cada empleado
+*Garantizar que no se pierda la información valiosa de cada empleado
 

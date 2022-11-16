@@ -16,35 +16,22 @@ class empleado {
     /*Los Setters & Getters, son métodos de acceso lo que indica que son siempre declarados públicos,
      y nos sirven para dos cosas:
 
-Setters: Del Inglés Set, que significa establecer,
- pues nos sirve para asignar un valor inicial a un atributo, pero de forma explícita,
-  además el Setter nunca retorna nada (Siempre es void), 
-  y solo nos permite dar acceso público a ciertos atributos que deseemos modificar. .
+     Setters: Del Inglés Set, que significa establecer,
+     pues nos sirve para asignar un valor inicial a un atributo, pero de forma explícita,
+    además el Setter nunca retorna nada (Siempre es void), 
+    y solo nos permite dar acceso público a ciertos atributos que deseemos modificar. .
 
-Getters: Del Inglés Get, que significa obtener, 
-pues nos sirve para obtener (recuperar o acceder) 
-el valor ya asignado a un atributo y utilizarlo para cierto método
+    Getters: Del Inglés Get, que significa obtener, 
+    pues nos sirve para obtener (recuperar o acceder) 
+    el valor ya asignado a un atributo y utilizarlo para cierto método
 */
      }   
 
      get nombre(){
         return this._nombre;
     }
-
-    /**
-     * @param {any} nombre
-     */
     set nombre(nombre){
         this._nombre = nombre;
-    }
-    get apellido(){
-        return this._apellido;
-    }
-    /**
-     * @param {any} apellido
-     */
-    set apellido(apellido){
-        this._apellido = apellido;
     }
 /*
 
@@ -61,15 +48,13 @@ Para asignar valores a los campos o llamar a otro constructor.
     }
 
 
-    
+ //Métodos   
      consultarEmpleado(){
         
-        let producto1 = new Producto('Pantalón', 200);
-        let producto2 = new Producto('Camisa', 100);
-        console.log( producto1.toString() );
-        console.log( producto2.toString() );
+        let empleado = new empleado('Pepito Perez');// declaración de objetos
+        console.log( empleado.toString() );
     
-        console.log("Su turno es:2:00 a 10:00 p.m")
+        console.log(empleado.nombre + "Su turno es:2:00 a 10:00 p.m")  //Impresión de los objetos
         } 
     }
 

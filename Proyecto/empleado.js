@@ -6,12 +6,13 @@ class empleado {
        fechaNacimiento = Date;
 
     constructor(nombre, apellido, direccion, cargo, eps, 
-        seguridad_social, fechaNacimiento){
+        seguridad_social, fechaNacimiento ){
 
         this._nombre = nombre; //cadena de valores alfanùmericos
         this._apellido = apellido;
         this._direccion = direccion;
         this._fechaNacimiento = fechaNacimiento; //DDMMAAA 
+     
 
     /*Los Setters & Getters, son métodos de acceso lo que indica que son siempre declarados públicos,
      y nos sirven para dos cosas:
@@ -57,5 +58,48 @@ Para asignar valores a los campos o llamar a otro constructor.
         console.log(empleado.nombre + "Su turno es:2:00 a 10:00 p.m")  //Impresión de los objetos
         } 
     }
+
+        let el, i;
+        let data = [
+            { nombre: empleado.nombre, cedula: empleado.cedula, cargo: empleado.cargo },
+            
+          ];
+        let panel = document.querySelector("#panel");
+
+// limpiar campos del formulario
+        function clearForm() {
+          document.querySelector("#nombre").value = "";
+          document.querySelector("#cedula").value = "";
+          document.querySelector("#cargo").value = "";
+        }  
+        function renderItem() {
+
+            panel.textContent = "";
+            data.forEach(empleado => {
+              el = document.createElement("option");
+              el.innerText = `${empleado.nombre} ${empleado.cedula} ${empleado.cargo}`;
+              panel.append(el);
+            });
+          }
+          
+          function create() {
+            let fn = document.querySelector("#nombre").value;
+            let ln = document.querySelector("#cedula").value;
+            let lm = document.querySelector("#cargo").value;
+
+            data = [...data, { nombre: fn, cedula: ln, cargo: lm }];
+            clearForm();
+            console.log(data)
+            renderItem();
+          }
+          
+          function panelClick() {
+            i = panel.selectedIndex;
+            document.querySelector("#nombre").value = data[i].nombre;
+            document.querySelector("#cedula").value = data[i].cedula;
+            document.querySelector("#cargo").value = data[i].cargo;
+          }
+    
+ renderItem();
 
 

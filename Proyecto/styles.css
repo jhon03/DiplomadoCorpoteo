@@ -1,0 +1,32 @@
+body, html {
+    height: 100%;
+ }
+ body {
+     margin: 0;
+     padding: 0; 
+     background: #fe0000cb; 
+ 
+     display: flex; 
+     flex-direction: rom; 
+     flex-wrap: wrap; 
+     justify-content: center;
+     align-items: center; 
+ }
+ .form-box {
+ 
+     width: 250px;
+     padding: 40px;
+     background: #fe0000cb;
+     text-align: center;
+ 
+ }
+ 
+ .form-title {
+     color: #0019fe; 
+     text-transform: uppercase;
+     font-weight: 500;
+ }
+ 
+
+ 
+ 

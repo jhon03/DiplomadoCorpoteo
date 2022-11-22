@@ -102,6 +102,7 @@ Para asignar valores a los campos o llamar a otro constructor.
             document.querySelector("#cargo").value = data[i].cargo;
           }
     
+         
 //alerta
 const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
 

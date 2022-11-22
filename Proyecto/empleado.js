@@ -59,6 +59,7 @@ Para asignar valores a los campos o llamar a otro constructor.
         } 
     }
 
+  
         let el, i;
         let data = [
             { nombre: empleado.nombre, cedula: empleado.cedula, cargo: empleado.cargo },
@@ -86,6 +87,7 @@ Para asignar valores a los campos o llamar a otro constructor.
             let fn = document.querySelector("#nombre").value;
             let ln = document.querySelector("#cedula").value;
             let lm = document.querySelector("#cargo").value;
+            
 
             data = [...data, { nombre: fn, cedula: ln, cargo: lm }];
             clearForm();

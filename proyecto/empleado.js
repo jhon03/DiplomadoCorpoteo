@@ -20,4 +20,73 @@ class empleado  {
         }
     
     
+    
+
+    get nombre() {
+        return this._nombre;
     }
+
+/**
+* @param {any} nombre
+ */
+set nombre(nombre) {
+   this._nombre = nombre;
+    }
+get apellido() {
+        return this._apellido;
+    }
+/**
+         * @param {any} apellido
+         */
+set apellido(apellido) {
+        this._apellido = apellido;
+    }
+get direccion() {
+        return this._direccion;
+    }
+/**
+         * @param {any} direccion
+         */
+set direccion(direccion) {
+        this._direccion = direccion;
+    }
+get cargo() {
+        return this._cargo;
+    }
+/**
+         * @param {any} cargo
+         */
+set cargo(cargo) {
+        this._cargo = cargo;
+    }
+get eps() {
+        return this._eps;
+    }
+/**
+         * @param {any} eps
+         */
+set eps(eps) {
+        this._eps = eps;
+    }
+get seguridadSocial() {
+        return this._seguridadSocial;
+    }
+/**
+          * @param {any} seguridadSocial
+          */
+set seguridadSocial(seguridadSocial) {
+        this._seguridadSocial = seguridadSocial;
+    }
+get fechaNacimiento() {
+        return this._fechaNacimiento
+    }
+/**
+          * @param {any} fechaNacimiento
+          */
+
+set fechaNacimiento(fechaNacimiento) {
+        this._fechaNacimiento = fechaNacimiento;
+    }
+
+    
+}

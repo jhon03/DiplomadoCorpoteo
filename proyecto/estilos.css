@@ -4,36 +4,29 @@
     box-sizing: border-box;
 }
 
-.limpiarEstilos::after {
-    content: "";
-    display: table;
-    clear: both;
+.container {
+
+    margin: 500px;
+    padding: 20px;
+    background: rgb(245, 10, 10);
+    margin: auto;
+    margin-top: 50px;
+
 }
 
-body {
-    color: #555;
-    font-family: Open Sans;
-    font-size: 16px;
-    position: relative;
-    height: 100vh;
-    font-weight: 400;
+.titulo {
+text-align: center;
+border: solid rgb(97, 97, 252) 1px;
+border-style: dashed;
+padding: 15px;
+color:rgb(97, 97, 252)
 }
 
-.derecha { float: right; }
-.rojo { color: #FF5049 !important; }
-.rojofocus:focus { border: 1px solid #FF5049 !important; }
+.padre {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    color: aquamarine;
 
-.cabecero {
-    height: 40vh;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    width: 100%;
-    padding-top: 150px;
-    padding-bottom: 100px;
-    color: #fff;
-    background: url(fondo.png), #7b4397;
-    background: url(fondo.png), -webkit-gradient(linear, right top, left top, from(#7b4397), to(#dc2430));
-    background: url(fondo.png), linear-gradient(to left, #7b4397, #dc2430)
 }
-

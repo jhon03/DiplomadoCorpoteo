@@ -88,5 +88,87 @@ set fechaNacimiento(fechaNacimiento) {
         this._fechaNacimiento = fechaNacimiento;
     }
 
+    toString(){
+        return `idEmpleado: ${this._idEmpleado}, nombre: ${this._nombre}  `;
+    }
+
+
+ //Métodos   
+     consultarEmpleado(){
+        
+        let empleado = new empleado('Juan Diego Aranda');// declaración de objetos
+        console.log( empleado.toString() );
     
+        console.log(empleado.nombre + "Su turno es:2:00 a 10:00 p.m")  //Impresión de los objetos
+        } 
+    }
+
+  
+        let el, i;
+        let data = [
+            { nombre: empleado.nombre, cedula: empleado.cedula, cargo: empleado.cargo },
+            
+          ];
+        let panel = document.querySelector("#panel");
+
+// limpiar campos del formulario
+        function clearForm() {
+          document.querySelector("#nombre").value = "";
+          document.querySelector("#cedula").value = "";
+          document.querySelector("#cargo").value = "";
+        }  
+        function renderItem() {
+
+            panel.textContent = "";
+            data.forEach(empleado => {
+              el = document.createElement("option");
+              el.innerText = `${empleado.nombre} ${empleado.cedula} ${empleado.cargo}`;
+              panel.append(el);
+            });
+          }
+          
+          function create() {
+            let fn = document.querySelector("#nombre").value;
+            let ln = document.querySelector("#cedula").value;
+            let lm = document.querySelector("#cargo").value;
+            
+
+            data = [...data, { nombre: fn, cedula: ln, cargo: lm }];
+            clearForm();
+            console.log(data)
+            renderItem();
+          }
+          
+          function panelClick() {
+            i = panel.selectedIndex;
+            document.querySelector("#nombre").value = data[i].nombre;
+            document.querySelector("#cedula").value = data[i].cedula;
+            document.querySelector("#cargo").value = data[i].cargo;
+          }
+    
+         
+//alerta
+const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+
+const alert = (message, type) => {
+  const wrapper = document.createElement('div')
+  wrapper.innerHTML = [
+    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+    `   <div>${message}</div>`,
+    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+    '</div>'
+  ].join('')
+
+  alertPlaceholder.append(wrapper)
 }
+
+const alertTrigger = document.getElementById('liveAlertBtn')
+if (alertTrigger) {
+  alertTrigger.addEventListener('click', () => {
+    alert('empleado! creado con éxito', 'success')
+  })
+}
+
+
+ 
+    

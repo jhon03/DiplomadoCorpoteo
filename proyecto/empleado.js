@@ -1,14 +1,27 @@
 class empleado  {
 
-    constructor(nombre, apellido, direccion, cargo, eps, seguridad_social, fechaNacimiento){
+   Primernombre = String;
+   Segundonombre = String;
+   Primerapellido = String;
+   Segundoapellido = String; 
+   documentodeidentidad = String;
+   Numerodeidentidad = String;
+   direccion = String;
+   correo = String;
+   eps = String;
+
+
+    constructor(Primernombre, Segundonombre, Primerapellido, Segundoapellido, documentodeidentidad, Numerodeidentidad, direccion, correo, eps ){
     
-        this.nombre = String; 
-        this.apellido = String; 
-        this.direccion = String;
-        this.cargo = String; 
-        this.eps = String;
-        this.seguridad_social = String;
-        this.fechaNacimiento = Date; 
+        this.Primernombre = String; 
+        this.Segundonombre = String; 
+        this.Primerapellido = String;
+        this.Segundoapellido = String; 
+        this.documentodeidentidad= String;
+        this.Numerodeidentidad = String;
+        this.direccion = String; 
+        this.correo = String;
+        this.eps = String; 
         
         }
     
@@ -22,70 +35,81 @@ class empleado  {
     
     
 
-    get nombre() {
-        return this._nombre;
+    get primernombre() {
+        return this._Primernombre;
     }
 
 /**
-* @param {any} nombre
+* @param {any} Primernombre
  */
-set nombre(nombre) {
-   this._nombre = nombre;
+set primernombre(nombre) {
+   this._Primernombre = primernombre;
     }
-get apellido() {
-        return this._apellido;
+get primerapellido() {
+        return this._Primerapellido;
     }
 /**
-         * @param {any} apellido
+         * @param {any} primerapellido
          */
-set apellido(apellido) {
-        this._apellido = apellido;
+set primerapellido(apellido) {
+        this._Primerapellido = primerapellido;
+    }
+get Segundoapellido() {
+        return this._segundoapellido;
+    }
+/**
+         * @param {any} Segundoapellido
+         */
+set Segundoapellido(Segundoapellido) {
+        this._segundoapellido = Segundoapellido;
+    }
+get documentodeidentidad() {
+        return this._documentodeidentidad;
+    }
+/**
+         * @param {any} documentodeidentidad
+         */
+set documentodeidentidad(documentodeidentidad) {
+        this._documentodeidentidad = documentodeidentidad;
+    }
+get Numerodeidentidad() {
+        return this._numerodeidentidad;
+    }
+/**
+         * @param {any} Numerodeidentidad
+         */
+set Numerodeidentidad(Numerodeidentidad) {
+        this._numerodeidentidad = Numerodeidentidad;
     }
 get direccion() {
         return this._direccion;
     }
 /**
-         * @param {any} direccion
-         */
+          * @param {any} direccion
+          */
 set direccion(direccion) {
         this._direccion = direccion;
     }
-get cargo() {
-        return this._cargo;
+get correo() {
+        return this._correo 
     }
 /**
-         * @param {any} cargo
-         */
-set cargo(cargo) {
-        this._cargo = cargo;
-    }
-get eps() {
-        return this._eps;
-    }
-/**
-         * @param {any} eps
-         */
-set eps(eps) {
-        this._eps = eps;
-    }
-get seguridadSocial() {
-        return this._seguridadSocial;
-    }
-/**
-          * @param {any} seguridadSocial
-          */
-set seguridadSocial(seguridadSocial) {
-        this._seguridadSocial = seguridadSocial;
-    }
-get fechaNacimiento() {
-        return this._fechaNacimiento
-    }
-/**
-          * @param {any} fechaNacimiento
+          * @param {any} correo
           */
 
-set fechaNacimiento(fechaNacimiento) {
-        this._fechaNacimiento = fechaNacimiento;
+set correo(correo) {
+        this._correo = correo;
+    }
+
+    get eps() {
+        return this._eps
+    }
+/**
+          * @param {any} eps
+          */
+
+set eps(eps) {
+        this._eps = eps;
     }
 
     toString(){
@@ -96,7 +120,7 @@ set fechaNacimiento(fechaNacimiento) {
  //Métodos   
      consultarEmpleado(){
         
-        let empleado = new empleado('Juan Diego Aranda');// declaración de objetos
+        let empleado = new empleado('Pepito Perez');// declaración de objetos
         console.log( empleado.toString() );
     
         console.log(empleado.nombre + "Su turno es:2:00 a 10:00 p.m")  //Impresión de los objetos
@@ -113,9 +137,16 @@ set fechaNacimiento(fechaNacimiento) {
 
 // limpiar campos del formulario
         function clearForm() {
-          document.querySelector("#nombre").value = "";
-          document.querySelector("#cedula").value = "";
-          document.querySelector("#cargo").value = "";
+          document.querySelector("#primernombre").value = "";
+          document.querySelector("segundonombre").value = "";
+          document.querySelector("#primerapellido").value = "";
+          document.querySelector("#segundoapellido").value = "";
+          document.querySelector("#documentodeidentidad").value = "";
+          document.querySelector("#nuemrodeidentidad").value = "";
+          document.querySelector("#direccion").value = "";
+          document.querySelector("#correo").value = "";
+          document.querySelector("#eps").value = "";
+
         }  
         function renderItem() {
 
@@ -128,12 +159,23 @@ set fechaNacimiento(fechaNacimiento) {
           }
           
           function create() {
-            let fn = document.querySelector("#nombre").value;
-            let ln = document.querySelector("#cedula").value;
-            let lm = document.querySelector("#cargo").value;
+            let fn = document.querySelector("#primernombre").value;
+            let ln = document.querySelector("#segundonombre").value;
+            let lb = document.querySelector("#primerapellido").value;
+            let lv = document.querySelector("#segundopellido").value;
+            let lc = document.querySelector("#documentodeidentidad").value;
+            let lx = document.querySelector("#numerodeidentidad").value;
+            let lz = document.querySelector("#direccion").value;
+            let lk = document.querySelector("#correo").value;
+            let lj = document.querySelector("#eps").value;
+
+
+
+
+
             
 
-            data = [...data, { nombre: fn, cedula: ln, cargo: lm }];
+            data = [...data, { primernombre: fn, Segundonombre: ln, primerapellido: lb, Segundoapellido: lv, documentodeidentidad: lc, Numerodeidentidad: lx, direccion: lz, correo: lk, eps: lj }];
             clearForm();
             console.log(data)
             renderItem();
@@ -141,9 +183,20 @@ set fechaNacimiento(fechaNacimiento) {
           
           function panelClick() {
             i = panel.selectedIndex;
-            document.querySelector("#nombre").value = data[i].nombre;
-            document.querySelector("#cedula").value = data[i].cedula;
-            document.querySelector("#cargo").value = data[i].cargo;
+            document.querySelector("#primernombre").value = data[i].primernombre;
+            document.querySelector("#segundonombre").value = data[i].Segundonombre;
+            document.querySelector("#primerapellido").value = data[i].primerapellido;
+            document.querySelector("#segundoapellido").value = data[i].Segundoapellido
+            document.querySelector("#documentodeidentidad").value = data[i].documentodeidentidad;
+            document.querySelector("#numerodeidentidad").value = data[i].Numerodeidentidad;
+            document.querySelector("#direccion").value = data[i].direccion;
+            document.querySelector("#correo").value = data[i].correo;
+            document.querySelector("#eps").value = data[i].eps;
+
+
+
+
+
           }
     
          
@@ -169,6 +222,6 @@ if (alertTrigger) {
   })
 }
 
-
+renderItem();
  
     

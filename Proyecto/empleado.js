@@ -4,6 +4,7 @@ class empleado {
        apellido = String;
        direccion = String;
        fechaNacimiento = Date;
+       tipoIdentificacion = String;
 
     constructor(nombre, apellido, direccion, cargo, eps, 
         seguridad_social, fechaNacimiento ){
@@ -12,6 +13,7 @@ class empleado {
         this._apellido = apellido;
         this._direccion = direccion;
         this._fechaNacimiento = fechaNacimiento; //DDMMAAA 
+        this._tipoIdentificacion = tipoIdentificacion;
      
 
     /*Los Setters & Getters, son métodos de acceso lo que indica que son siempre declarados públicos,
@@ -45,7 +47,7 @@ Para asignar valores a los campos o llamar a otro constructor.
 
 */
     toString(){
-        return `idEmpleado: ${this._idEmpleado}, nombre: ${this._nombre}  `;
+        return `idEmpleado: ${this._idEmpleado}, nombre: ${this._nombre} `;
     }
 
 
@@ -62,7 +64,7 @@ Para asignar valores a los campos o llamar a otro constructor.
   
         let el, i;
         let data = [
-            { nombre: empleado.nombre, cedula: empleado.cedula, cargo: empleado.cargo },
+            { nombre: empleado._nombre, cedula: empleado.cedula, cargo: empleado.cargo, tipoIdentificacion: empleado.tipoIdentificacion }
             
           ];
         let panel = document.querySelector("#panel");
@@ -72,13 +74,15 @@ Para asignar valores a los campos o llamar a otro constructor.
           document.querySelector("#nombre").value = "";
           document.querySelector("#cedula").value = "";
           document.querySelector("#cargo").value = "";
+          document.querySelector("#tipoIdentificacion").value = "";
+
         }  
         function renderItem() {
 
             panel.textContent = "";
             data.forEach(empleado => {
               el = document.createElement("option");
-              el.innerText = `${empleado.nombre} ${empleado.cedula} ${empleado.cargo}`;
+              el.innerText = `${empleado.nombre} ${empleado.cedula} ${empleado.cargo} ${empleado.tipoIdentificacion}`;
               panel.append(el);
             });
           }
@@ -87,9 +91,11 @@ Para asignar valores a los campos o llamar a otro constructor.
             let fn = document.querySelector("#nombre").value;
             let ln = document.querySelector("#cedula").value;
             let lm = document.querySelector("#cargo").value;
+            let nn = document.querySelector("#tipoIdentificacion").value;
             
+            let bb = document.querySelector("#tipoIdentificacion").value;
 
-            data = [...data, { nombre: fn, cedula: ln, cargo: lm }];
+            data = [...data, { nombre: fn, cedula: ln, cargo: lm, tipoIdentificacion: nn}];
             clearForm();
             console.log(data)
             renderItem();
@@ -100,7 +106,10 @@ Para asignar valores a los campos o llamar a otro constructor.
             document.querySelector("#nombre").value = data[i].nombre;
             document.querySelector("#cedula").value = data[i].cedula;
             document.querySelector("#cargo").value = data[i].cargo;
+            document.querySelector("#tipoIdentificacion").value = data[i].cargo;
           }
+
+          
     
          
 //alerta

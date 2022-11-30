@@ -1,26 +1,13 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.container {
-
-   margin: 500px;
-   padding: 20px;
-   background: rgba(250, 2, 2, 0.842); 
-   
-}
-
-
-.titulo {
-text-align: center;
-border: 20px;
-border-style: dashed;
-padding: 15ox;
-color: red;
+body{
+    background: red;
 
 }
 
+.mb-3 {
+    width: 500px;
+    padding: 20px;
+    background: red;
+    margin: auto;
+    margin-top: 50px;
 
-
+}

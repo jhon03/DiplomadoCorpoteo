@@ -43,25 +43,25 @@ class empleado  {
 * @param {any} Primernombre
  */
 set primernombre(nombre) {
-   this._Primernombre = primernombre;
+   this._Primernombre = Primernombre;
     }
 get primerapellido() {
         return this._Primerapellido;
     }
 /**
-         * @param {any} primerapellido
+         * @param {any} Primerapellido
          */
 set primerapellido(apellido) {
-        this._Primerapellido = primerapellido;
+        this._Primerapellido = Primerapellido;
     }
 get Segundoapellido() {
-        return this._segundoapellido;
+        return this._Segundoapellido;
     }
 /**
          * @param {any} Segundoapellido
          */
 set Segundoapellido(Segundoapellido) {
-        this._segundoapellido = Segundoapellido;
+        this._Segundoapellido = Segundoapellido;
     }
 get documentodeidentidad() {
         return this._documentodeidentidad;
@@ -73,13 +73,13 @@ set documentodeidentidad(documentodeidentidad) {
         this._documentodeidentidad = documentodeidentidad;
     }
 get Numerodeidentidad() {
-        return this._numerodeidentidad;
+        return this._Numerodeidentidad;
     }
 /**
          * @param {any} Numerodeidentidad
          */
 set Numerodeidentidad(Numerodeidentidad) {
-        this._numerodeidentidad = Numerodeidentidad;
+        this._Numerodeidentidad = Numerodeidentidad;
     }
 get direccion() {
         return this._direccion;
@@ -113,7 +113,7 @@ set eps(eps) {
     }
 
     toString(){
-        return `primernombre: ${this._Primernombre}, segundonombre: ${this._Segundonombre},primerapellido: ${this._Primerapellido}, segundoapellido: ${this._segundoapellido}, documentodeidentidad: ${this._documentodeidentidad}, nuemrodeidentidad: ${this._numerodeidentidad}, direccion: ${this._direccion}, correo: ${this._correo}, eps: ${this._eps}, `;        
+        return `Primernombre: ${this._Primernombre}, Segundonombre: ${this._Segundonombre},Primerapellido: ${this._Primerapellido}, Segundoapellido: ${this._Segundoapellido}, documentodeidentidad: ${this._documentodeidentidad}, Nuemrodeidentidad: ${this._Numerodeidentidad}, direccion: ${this._direccion}, correo: ${this._correo}, eps: ${this._eps}, `;        
     }
 
 
@@ -123,9 +123,9 @@ set eps(eps) {
         let empleado = new empleado('Pepito Perez');// declaración de objetos
         console.log( empleado.toString() );
     
-        console.log(empleado.primernombre + "Su turno es:2:00 a 010:0 p.m")  //Impresión de los objetos
+        console.log(empleado.Primernombre + "Su turno es:2:00 a 010:0 p.m")  //Impresión de los objetos
         console.log(empleado.Segundonombre + "Su turno es:2:00 a 010:0 p.m")
-        console.log(empleado.primerapellido + "Su turno es:2:00 a 010:0 p.m")
+        console.log(empleado.Primerapellido + "Su turno es:2:00 a 010:0 p.m")
         console.log(empleado.Segundoapellido + "Su turno es:2:00 a 010:0 p.m")
         console.log(empleado.documentodeidentidad+ "Su turno es:2:00 a 010:0 p.m")
         console.log(empleado.Numerodeidentidad + "Su turno es:2:00 a 010:0 p.m")
@@ -138,19 +138,19 @@ set eps(eps) {
   
         let el, i;
         let data = [
-            {primernombre: empleado.primernombre, Segundonombre: empleado.Segundonombre, primerapellido: empleado.primerapellido, Segundoapellido: empleado.Segundoapellido, documentodeidentidad: empleado.documentodeidentidad, Numerodeidentidad: empleado.Numerodeidentidad, direccion: empleado.direccion, correp: empleado.correo, eps: empleado.eps },
+            {Primernombre: empleado.Primernombre, Segundonombre: empleado.Segundonombre, Primerapellido: empleado.Primerapellido, Segundoapellido: empleado.Segundoapellido, documentodeidentidad: empleado.documentodeidentidad, Numerodeidentidad: empleado.Numerodeidentidad, direccion: empleado.direccion, correo: empleado.correo, eps: empleado.eps },
             
           ];
         let panel = document.querySelector("#panel");
 
 // limpiar campos del formulario
         function clearForm() {
-          document.querySelector("#primernombre").value = "";
-          document.querySelector("segundonombre").value = "";
-          document.querySelector("#primerapellido").value = "";
-          document.querySelector("#segundoapellido").value = "";
+          document.querySelector("#Primernombre").value = "";
+          document.querySelector("Segundonombre").value = "";
+          document.querySelector("#Primerapellido").value = "";
+          document.querySelector("#Segundoapellido").value = "";
           document.querySelector("#documentodeidentidad").value = "";
-          document.querySelector("#nuemrodeidentidad").value = "";
+          document.querySelector("#Nuemrodeidentidad").value = "";
           document.querySelector("#direccion").value = "";
           document.querySelector("#correo").value = "";
           document.querySelector("#eps").value = "";
@@ -167,12 +167,12 @@ set eps(eps) {
           }
           
           function create() {
-            let fn = document.querySelector("#primernombre").value;
-            let ln = document.querySelector("#segundonombre").value;
-            let lb = document.querySelector("#primerapellido").value;
-            let lv = document.querySelector("#segundopellido").value;
+            let fn = document.querySelector("#Primernombre").value;
+            let ln = document.querySelector("#Segundonombre").value;
+            let lb = document.querySelector("#Primerapellido").value;
+            let lv = document.querySelector("#Segundopellido").value;
             let lc = document.querySelector("#documentodeidentidad").value;
-            let lx = document.querySelector("#numerodeidentidad").value;
+            let lx = document.querySelector("#Numerodeidentidad").value;
             let lz = document.querySelector("#direccion").value;
             let lk = document.querySelector("#correo").value;
             let lj = document.querySelector("#eps").value;
@@ -183,7 +183,7 @@ set eps(eps) {
 
             
 
-            data = [...data, { primernombre: fn, Segundonombre: ln, primerapellido: lb, Segundoapellido: lv, documentodeidentidad: lc, Numerodeidentidad: lx, direccion: lz, correo: lk, eps: lj }];
+            data = [...data, { Primernombre: fn, Segundonombre: ln, Primerapellido: lb, Segundoapellido: lv, documentodeidentidad: lc, Numerodeidentidad: lx, direccion: lz, correo: lk, eps: lj }];
             clearForm();
             console.log(data)
             renderItem();
@@ -191,12 +191,12 @@ set eps(eps) {
           
           function panelClick() {
             i = panel.selectedIndex;
-            document.querySelector("#primernombre").value = data[i].primernombre;
-            document.querySelector("#segundonombre").value = data[i].Segundonombre;
-            document.querySelector("#primerapellido").value = data[i].primerapellido;
-            document.querySelector("#segundoapellido").value = data[i].Segundoapellido
+            document.querySelector("#Primernombre").value = data[i].Primernombre;
+            document.querySelector("#Segundonombre").value = data[i].Segundonombre;
+            document.querySelector("#Primerapellido").value = data[i].Primerapellido;
+            document.querySelector("#Segundoapellido").value = data[i].Segundoapellido
             document.querySelector("#documentodeidentidad").value = data[i].documentodeidentidad;
-            document.querySelector("#numerodeidentidad").value = data[i].Numerodeidentidad;
+            document.querySelector("#Numerodeidentidad").value = data[i].Numerodeidentidad;
             document.querySelector("#direccion").value = data[i].direccion;
             document.querySelector("#correo").value = data[i].correo;
             document.querySelector("#eps").value = data[i].eps;

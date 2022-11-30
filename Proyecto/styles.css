@@ -1,16 +1,15 @@
-body, html {
-    height: 100%;
- }
+
  body {
      margin: 0;
      padding: 0; 
-     background: #fe0000cb; 
+     
  
      display: flex; 
      flex-direction: rom; 
      flex-wrap: wrap; 
      justify-content: center;
      align-items: center; 
+
  }
  .form-box {
  
@@ -27,6 +26,37 @@ body, html {
      font-weight: 500;
  }
  
+ .container{
+    margin: 20%;
+}
 
+
+.cabecero {
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    color: #fff;
+    background: url(fondo.png), #7b4397;
+    background: url(fondo.png), -webkit-gradient(linear, right top, left top, from(#7b4397), to(#dc2430));
+    background: url(fondo.png), linear-gradient(to left, #7b4397, #dc2430)
+}
+.panel{
+
+    margin: 80px;
+    width: 200%;
+    height: 200%;
+}
+
+.card{
+
+    width: 50%;
+    height: 50%;
+    margin: 50px;
+    padding: 20px;
+}
  
  

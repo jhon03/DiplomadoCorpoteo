@@ -1,9 +1,9 @@
 class crearEmpleado {
 
-    nombres = String ;
-    apellidos = String;
+    nombre= String ;
+    apellido= String;
     tipoDocumento= String; 
-    númeroDocumento= Number;
+    numeroDocumento= Number;
     fechaNacimiento = Date;
     direccion= String;
     cargo= String; 
@@ -12,13 +12,13 @@ class crearEmpleado {
     correoElectronico=String;
     contraseña= String;
     
-    constructor (nombres, apellidos, tipoDocumento, númeroDocumento, fechaNacimiento, direccion, cargo, eps, 
+    constructor (nombre, apellido, tipoDocumento, numeroDocumento, fechaNacimiento, direccion, cargo, eps, 
     seguridadSocial, correoElectronico, contraseña ){
     
-     this._nombres = nombres; //cadena de valores alfanùmericos
-     this._apellidos = apellidos;
+     this._nombre = nombre; //cadena de valores alfanùmericos
+     this._apellido = apellido;
      this._tipoDocumento= tipoDocumento;
-     this._númeroDocumento= númeroDocumento;
+     this._numeroDocumento= numeroDocumento;
      this._fechaNacimiento= fechaNacimiento; //DDMMAAAA
      this._direccion = direccion;
      this._cargo = cargo;
@@ -30,25 +30,25 @@ class crearEmpleado {
     
 
     
-        get nombres (){
+        get nombre (){
           return this._nombres;
       }
     
     /**
-    * @param {any} nombres
+    * @param {any} nombre
      */
-    set nombre(nombres) {
-     this._nombres = nombres;
+    set nombre(nombre) {
+     this._nombre = nombre;
       }
-    get apellidos() {
-          return this._apellidos;
+    get apellido() {
+          return this._apellido;
       }
     
     /**
-           * @param {any} apellidos
+           * @param {any} apellido
            */
-     set apellido(apellidos){
-          this._apellidos = apellidos;
+     set apellido(apellido){
+          this._apellido = apellido;
       }
 
       get tipoDocumento () {
@@ -67,7 +67,7 @@ class crearEmpleado {
          * @param {any} númeroDocumento
          */
   set _númeroDocumento(_númeroDocumento) {
-        this._númeroDocumento = númeroDocumento;
+        this._númeroDocumento = numeroDocumento;
     }
     get fechaNacimiento () {
         return this._fechaNacimiento;
@@ -136,33 +136,35 @@ class crearEmpleado {
 
 
     toString(){
-    return `idEmpleado: ${this._idEmpleado}, nombre: ${this._nombres}, apellidos: ${this._apellidos}, tipoDocumento: ${this._tipoDocumento}, númeroDocumento: ${this._númeroDocumento}, fechaNacimiento: ${this._fechaNacimiento}, direccion: ${this._direccion}, cargo: ${this._cargo}, eps: ${this._eps}, seguridadSocial: ${this._seguridadSocial}, correoElectronico: ${this._correoElectronico}, contraseña: ${this._contraseña}  `;
+    return `idEmpleado: ${this._idEmpleado}, nombre: ${this._nombre}, apellido: ${this._apellido}, numeroDocumento: ${this._numeroDocumento}, fechaNacimiento: ${this._fechaNacimiento}, direccion: ${this._direccion}, cargo: ${this._cargo}, eps: ${this._eps}, seguridadSocial: ${this._seguridadSocial}, correoElectronico: ${this._correoElectronico}, contraseña: ${this._contraseña}  `;
      }
         
-        //Métodos   
+       /* Métodos   
      crearEmpleado(){
          
        let empleado = new empleado('Pepito Perez');// declaración de objetos
          console.log( empleado.toString() );
         console.log(empleado.nombre + "Su turno es:2:00 a 10:00 p.m")  //Impresión de los objetos
         } 
-        }
-        
+        */
+      }
          
-         let el, i;
+         let el, idEmpleado;
          let data = [
-         { nombres: empleado._nombres, apellidos: empleado._apellidos, tipoDocumento: empleado._tipoDocumento,  númeroDocumento: empleado._númeroDocumento, fechaNacimiento: empleado._fechaNacimiento, direccion: empleado._direccion, cargo: empleado._cargo, eps: empleado._eps, seguridadSocial: empleado._seguridadSocial, correoElectronico: empleado._correoElectronico, contraseña: empleado._contraseña}
+
+
+         { nombre: crearEmpleado._nombre, apellido: crearEmpleado._apellido, numeroDocumento: crearEmpleado._numeroDocumento, fechaNacimiento: crearEmpleado._fechaNacimiento, direccion: crearEmpleado._direccion, cargo: crearEmpleado._cargo, eps: crearEmpleado._eps, seguridadSocial: crearEmpleado._seguridadSocial, correoElectronico: crearEmpleado._correoElectronico, contraseña:crearEmpleado._contraseña}
          
          ];
          let panel = document.querySelector("#panel");
         
          // limpiar campos del formulario
          function clearForm() {
-         document.querySelector("#nombres").value = "";
-         document.querySelector("#apellidos").value= "";
-         document.querySelector("#tipoDocumento").value= "";
-         document.querySelector("#númeroDocumento").value = "";
-         document.querySelector("#fechaNaciemiento").value= "";
+         document.querySelector("#nombre").value = "";
+         document.querySelector("#apellido").value= "";
+        // document.querySelector("#tipoDocumento").value= "";
+         document.querySelector("#numeroDocumento").value = "";
+         document.querySelector("#fechaNacimiento").value= "";
          document.querySelector("#direccion").value= "";
          document.querySelector("#cargo").value = "";
          document.querySelector("#eps").value="";
@@ -175,16 +177,16 @@ class crearEmpleado {
          panel.textContent = "";
          data.forEach(empleado => {
          el = document.createElement("option");
-         el.innerText = `${empleado.nombres} ${empleado.apellidos} ${empleado.tipoDocumento} ${empleado.númeroDocumento} ${empleado.fechaNacimiento} ${empleado.direccion}${empleado.cargo}${empleado.eps}${empleado.seguridadSocial}${empleado.correoElectronico}${empleado.contraseña}`;
+         el.innerText = `${empleado.nombre} ${empleado.apellido} ${empleado.numeroDocumento} ${empleado.fechaNacimiento} ${empleado.direccion}${empleado.cargo}${empleado.eps}${empleado.seguridadSocial}${empleado.correoElectronico}${empleado.contraseña}`;
          panel.append(el);
          });
          }
         
          function guardarEmpleado() {
-         let fn = document.querySelector("#nombres").value;
-         let fa = document.querySelector("#apellidos").value;
-         let fd = document.querySelector("#tipoDocumento").value; 
-         let ln = document.querySelector("#númeroDocumento").value;
+         let fn = document.querySelector("#nombre").value;
+         let fa = document.querySelector("#apellido").value;
+        // let fd = document.querySelector("#tipoDocumento").value; 
+         let ln = document.querySelector("#numeroDocumento").value;
          let fc = document.querySelector("#fechaNacimiento").value;
          let fv = document.querySelector("#direccion").value;
          let lm = document.querySelector("#cargo").value;
@@ -195,7 +197,7 @@ class crearEmpleado {
         
         
         
-     data = [...data, { nombres: fn, apellidos: fa, tipoDocumento: fd, númeroDocumento: ln, fechaNacimiento: fc, direccion: fv, cargo: lm, eps: fe, seguridadSocial: fs, correoElectronico: fm, contraseña: fp }];
+     data = [...data, { nombre: fn, apellido: fa, numeroDocumento: ln, fechaNacimiento: fc, direccion: fv, cargo: lm, eps: fe, seguridadSocial: fs, correoElectronico: fm, contraseña: fp }];
         clearForm();
          console.log(data)
          renderItem();
@@ -203,11 +205,11 @@ class crearEmpleado {
         
          function panelClick() {
         i = panel.selectedIndex;
-         document.querySelector("#nombres").value = data[i].nombres;
-         document.querySelector("#apellidos").value = data[i].apellidos;
-         document.querySelector("#tipoDocumento").value = data[i].tipoDocumento;
-         document.querySelector("#númeroDocumento").value = data[i].númeroDocumento;
-         document.querySelector("#fechaNacimeinto").value = data[i].fechaNacimiento;
+         document.querySelector("#nombre").value = data[i].nombre;
+         document.querySelector("#apellido").value = data[i].apellido;
+         //document.querySelector("#tipoDocumento").value = data[i].tipoDocumento;
+         document.querySelector("#numeroDocumento").value = data[i].númeroDocumento;
+         document.querySelector("#fechaNacimiento").value = data[i].fechaNacimiento;
          document.querySelector("#direccion").value = data[i].direccion;
          document.querySelector("#cargo").value = data[i].cargo;
          document.querySelector("#eps").value = data[i].eps;
@@ -236,8 +238,7 @@ class crearEmpleado {
         if (alertTrigger) {
          alertTrigger.addEventListener('click', () => {
          alert('empleado! creado con éxito', 'success')
-         alert('empleado! creado con éxito', 'success')
-         alert('empleado! creado con éxito', 'success')
+         
           })
         }
           renderItem();

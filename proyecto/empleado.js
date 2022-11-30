@@ -113,7 +113,7 @@ set eps(eps) {
     }
 
     toString(){
-        return `idEmpleado: ${this._idEmpleado}, nombre: ${this._nombre}  `;
+        return `primernombre: ${this._Primernombre}, segundonombre: ${this._Segundonombre},primerapellido: ${this._Primerapellido}, segundoapellido: ${this._segundoapellido}, documentodeidentidad: ${this._documentodeidentidad}, nuemrodeidentidad: ${this._numerodeidentidad}, direccion: ${this._direccion}, correo: ${this._correo}, eps: ${this._eps}, `;        
     }
 
 
@@ -123,14 +123,22 @@ set eps(eps) {
         let empleado = new empleado('Pepito Perez');// declaración de objetos
         console.log( empleado.toString() );
     
-        console.log(empleado.nombre + "Su turno es:2:00 a 10:00 p.m")  //Impresión de los objetos
+        console.log(empleado.primernombre + "Su turno es:2:00 a 010:0 p.m")  //Impresión de los objetos
+        console.log(empleado.Segundonombre + "Su turno es:2:00 a 010:0 p.m")
+        console.log(empleado.primerapellido + "Su turno es:2:00 a 010:0 p.m")
+        console.log(empleado.Segundoapellido + "Su turno es:2:00 a 010:0 p.m")
+        console.log(empleado.documentodeidentidad+ "Su turno es:2:00 a 010:0 p.m")
+        console.log(empleado.Numerodeidentidad + "Su turno es:2:00 a 010:0 p.m")
+        console.log(empleado.direccion + "Su turno es:2:00 a 010:0 p.m")
+        console.log(empleado.correo + "Su turno es:2:00 a 010:0 p.m")
+        console.log(empleado.eps + "Su turno es:2:00 a 010:0 p.m")
         } 
     }
 
   
         let el, i;
         let data = [
-            { nombre: empleado.nombre, cedula: empleado.cedula, cargo: empleado.cargo },
+            {primernombre: empleado.primernombre, Segundonombre: empleado.Segundonombre, primerapellido: empleado.primerapellido, Segundoapellido: empleado.Segundoapellido, documentodeidentidad: empleado.documentodeidentidad, Numerodeidentidad: empleado.Numerodeidentidad, direccion: empleado.direccion, correp: empleado.correo, eps: empleado.eps },
             
           ];
         let panel = document.querySelector("#panel");
@@ -153,7 +161,7 @@ set eps(eps) {
             panel.textContent = "";
             data.forEach(empleado => {
               el = document.createElement("option");
-              el.innerText = `${empleado.nombre} ${empleado.cedula} ${empleado.cargo}`;
+              el.innerText = `${empleado.primernombre} ${empleado.Segundonombre} ${empleado.primerapellido} ${empleado.Segundoapellido} ${empleado.documentodeidentidad} ${empleado.Numerodeidentidad} ${empleado.direccion} ${empleado.correo} ${empleado.eps} `;
               panel.append(el);
             });
           }

@@ -1,32 +1,13 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body{
+    background: red;
+
 }
 
-.container {
-
-    margin: 500px;
+.mb-3 {
+    width: 500px;
     padding: 20px;
-    background: rgb(245, 10, 10);
+    background: red;
     margin: auto;
     margin-top: 50px;
-
-}
-
-.titulo {
-text-align: center;
-border: solid rgb(97, 97, 252) 1px;
-border-style: dashed;
-padding: 15px;
-color:rgb(97, 97, 252)
-}
-
-.padre {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    color: aquamarine;
 
 }

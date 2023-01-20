@@ -1,0 +1,130 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="estilos.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card">
+        <form class="w3-container" onsubmit="event.preventDefault()">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Primer Nombre</label>
+            <input class="form-control" id="Primer nombre" name="Primer nombre" placeholder="Nombre">
+           
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Segundo Nombre</label>
+                <input class="form-control" id="Segundo nombre" name="Segundo nombre" placeholder="Nombre">
+
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Primer Apellido</label>
+            <input class="form-control" id="Primer Apellido" name="Primer Apellido" placeholder="Apellido">
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Segundo Apellido</label>
+            <input class="form-control" id="Segundo Apellido" name="Segundo Apellido" placeholder="Apellido">
+
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Documento de identidad</label>
+                <input class="form-control" id="Documento de identidad" name="Documento de identidad" placeholder="documento de identidad">
+              </div>
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Número de identiad</label>
+            <input class="form-control" id="Número de identiad" name="Número de identiad" placeholder="Número de identida">
+          </div>
+          
+          <div class="mb-3"> 
+            <label for="exampleInputPassword1" class="form-label"> Dirección</label>
+            <input class="form-control" id="Dirección" name="Dirección" placeholder="Dirección"> 
+          </div>
+          
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">correo</label>
+            <input class="form-control" id="correo" name="correo" placeholder="correo">
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Eps</label>
+            <input class="form-control" id="Eps" name="Eps" placeholder="Eps">
+          </div>
+
+
+        <br>
+          <button type="submit" class="btn btn-primary" onclick="clearForm()">Limpiar Formulario</button>
+         <br>
+
+  <div id="liveAlertPlaceholder"></div>
+<br>
+  <button type="button" class="btn btn-success" id="liveAlertBtn" onclick="create()">Crear Empleado</button>
+  </div>
+        </form>
+  
+       
+  </div>
+   
+  <div class="panel">
+  <select id="panel" size="20" onclick="panelClick()"> </select>
+ 
+
+
+  <div>
+    <br><br>
+    <table class="table table-bordered table-striped">
+  
+      <thead>
+          <tr>
+              <th>Nombre</th>
+              <th>Cedula</th>
+              <th>Cargo</th>
+            
+              
+              <th>
+                  editar
+              </th>
+  
+    
+          </tr>
+          
+      </thead>
+  
+  <tbody>
+  
+  
+    <tr *ngFor="let colaborador of data">
+      <td> Juan</td>
+      <td> 1114952519</td>
+      <td> Cajero</td>
+      <td>
+    
+  
+      <button type="button" name="button" [routerLink]="['/registro', colaborador.idCol]" class="btn btn-primary">editar</button>
+      </td>
+  
+    </tr>
+  
+  
+  </tbody>
+  
+  </table>
+  
+  </div>      
+  
+      <script src='empleado.js'>
+  
+  
+  
+      </script>
+    
+
+    </body>
+</html>
+</body>
+</html>
